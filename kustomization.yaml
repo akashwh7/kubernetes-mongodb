@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- mongodb-statefulset.yaml
+- mongodb-pv.yaml
+- mongodb-pvc.yaml
+- mongodb-clusterip-svc.yaml
+- mongodb-client.yaml
+
+secretGenerator:
+- name: mongo-creds
+  literals:
+  - username=YWRtaW51c2Vy
+  - password=cGFzc3dvcmQxMjM=

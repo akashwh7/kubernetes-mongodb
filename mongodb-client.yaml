@@ -1,3 +1,21 @@
+# To access services in two different namespaces you can use url like this:
+
+# HTTP://<your-service-name>.<namespace-with-that-service>.svc.cluster.local
+# To list out all your namespaces you can use:
+
+# kubectl get namespace
+# And for service in that namespace you can simply use:
+
+# kubectl get services -n <namespace-name>
+# Exec into the client.
+
+# kubectl exec deployment/mongo-client -it -- /bin/bash
+# Login into the MongoDB shell
+
+# mongo --host mongo-nodeport-svc --port 27017 -u adminuser -p password123
+#
+#eg. mongo --host mongo-clusterip-svc.mongo.svc.cluster.local --port 27017 -u adminuser -p password123
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
