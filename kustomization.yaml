@@ -14,3 +14,8 @@ secretGenerator:
   literals:
   - username=YWRtaW51c2Vy
   - password=cGFzc3dvcmQxMjM=
+
+images: # patch mongo image name with new image name
+- name: mongo
+  newName: my.docker.registry.com/my-project/my-app
+  newTag: test  
