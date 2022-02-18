@@ -15,6 +15,9 @@
 # mongo --host mongo-nodeport-svc --port 27017 -u adminuser -p password123
 #
 #eg. mongo --host mongo-clusterip-svc.mongo.svc.cluster.local --port 27017 -u adminuser -p password123
+# kubectl get svc -n <namespace>
+# kubectl port-forward service/mongo-clusterip-svc -n mongo 8000:27017
+# kubectl port-forward service/<svc-name> -n <namespace> <local-port>:<cluster-port>
 
 apiVersion: apps/v1
 kind: Deployment

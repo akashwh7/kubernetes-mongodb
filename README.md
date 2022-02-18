@@ -13,3 +13,5 @@ Added comments to mongodb-client.yaml
 Added mongodb-statefulset.yaml
 
 Added mongodb-clusterip-svc.yaml
+
+./kustomize build . | kubectl apply -f -

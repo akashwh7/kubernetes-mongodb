@@ -1,6 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: mongodb
 resources:
+- mongodb-namespace.yaml
 - mongodb-statefulset.yaml
 - mongodb-pv.yaml
 - mongodb-pvc.yaml
