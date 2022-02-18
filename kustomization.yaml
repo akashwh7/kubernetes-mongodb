@@ -1,3 +1,4 @@
+# Run this in kustomization.yaml directory: kustomize build . | kubectl apply -f -
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: mongodb
