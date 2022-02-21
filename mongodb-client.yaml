@@ -38,6 +38,13 @@ spec:
       containers:
       - image: mongo
         name: mongo-client
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: 500m
+          requests:
+            memory: "1Gi"
+            cpu: 200m        
         env:
         - name: mongo-client_INITDB_ROOT_USERNAME
           value: 'dummy'

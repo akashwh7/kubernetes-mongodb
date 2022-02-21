@@ -18,6 +18,13 @@ spec:
       containers:
       - image: mongo
         name: mongo
+        resources:
+          limits:
+            memory: "2Gi"
+            cpu: 500m
+          requests:
+            memory: "1Gi"
+            cpu: 200m
         args: ["--dbpath","/data/db"]
         livenessProbe:
           exec:
