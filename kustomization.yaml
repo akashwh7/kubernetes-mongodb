@@ -1,6 +1,9 @@
 # Run this in kustomization.yaml directory: kustomize build . | kubectl apply -f -
 # mongodb-secrets.yaml file for reference.
-# Comment out mongodb-pv.yaml if dynamic storage provisioner is in place. 
+# Comment out mongodb-pv.yaml if dynamic storage provisioner is in place.
+# wget https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.2/kustomize_v4.5.2_linux_amd64.tar.gz
+# tar -xvzf kustomize_v4.5.2_linux_amd64.tar.gz
+# chmod +x kustomize && cp kustomize /usr/bin 
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: mongodb
